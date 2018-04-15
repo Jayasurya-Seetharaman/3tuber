@@ -1,0 +1,221 @@
+<!--Menu starts-->
+<div class="d-none d-sm-block">
+<ul class="nav justify-content-end">
+  <li class="nav-item">
+    <a class="nav-link" href="#how">How To Download</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#about">About Us</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#news">Newsletter</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#contact">Contact Us</a>
+  </li>
+</ul>
+</div>
+<!--Menu ends-->
+
+<!--Mobile menu starts-->
+<div class="d-block d-sm-none">
+  <a href="javascript:void(0)" id="mob-menu-btn" style="padding-left:10px;padding-top:2px;color:#000;"><i id="bar" class="fas fa-bars"></i> </a><span style="padding-left:10px;font-size: 1.35rem;">Video Downloader</span>
+  <div class="container">
+    <ul class="nav flex-column" id="mob-menu">
+    <li class="nav-item">
+      <a class="nav-link" href="#how">How To Download</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#about">About Us</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#news">Newsletter</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#contact">Contact Us</a>
+    </li>
+  </ul>
+  </div>
+</div>
+<!--Mobile menu ends-->
+
+<!--Banner starts-->
+<div class="jumbotron">
+ <div class="row">
+  <div class="col-lg-5 offset-lg-1 text-center" id="scroll">
+    <div class="input-group mb-3 input-group-lg" style="padding-top: 1.4rem;">
+      <input type="text" onkeyup="checkTextField(this);" class="form-control" id="vd_url" placeholder="Paste url" aria-label="Recipient's username" aria-describedby="basic-addon2">
+      <div class="input-group-append">
+        <span class="btn btn-primary download" id="" oninput="getVideoResults();"><i class="fa fa-arrow-right" onclick="getVideoResults()"></i></span>
+      </div>
+    </div>
+  </div>
+ </div>
+</div>
+<!--Banner ends-->
+
+<!--Video Contents-->
+<div class="container-fluid video-container-mob" style="margin-top: -9.5rem;display: none !important;" id="video-container">
+    {{!-- <div class="row"> --}}
+        <div class="col-lg-5 offset-lg-1 col-12">
+            <div class="card">
+              <div class="card-body">
+                <div class="row" id="no-data"></div>
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div id="load" style="display: none;" align="center">
+                      <div id="loader"></div>
+                      {{!-- <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:70%"></div>
+                      </div> --}}
+                    </div>
+                  </div>  
+                </div>
+                <div id="video-div">
+                  <div class="row">
+
+                      <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+                          {{!-- <img src="/images/About-us.png" class="img-fluid"/> --}}
+                          <div id="thumb"></div>
+                      </div>
+                      <div class="col-lg-8 col-md-8 col-sm-8 col-12 text-center text-sm-left">
+                          <div id="vd_title"></div>
+                          <div class="btn-group">
+                            {{!-- <button type="button" class="btn btn-primary">Download</button> --}}
+                            <div id="btn_dwmld"></div>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-success btn-dwnld-2 dropdown-toggle" data-toggle="dropdown" id="top_frmt" style="text-transform: capitalize; display: none">
+                                
+                                </button>
+                                <div class="dropdown-menu" style="border-color: rgb(0, 123, 255);border-radius: 0px;margin-top: -2.4rem;padding: 0px !important;">
+                                <div id="videos_cont"></div>
+                                </div>
+                            </div>
+                          </div>
+                      </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    {{!-- </div> --}}
+</div>
+
+<!--Add banner starts
+<div class="container-fluid add-banner">
+</div>-->
+<!--Add banner ends-->
+
+<!--How to download starts-->
+<div class="container" id="how">
+  <div class="row pad-top">
+    <div class="col-lg-6 col-md-6">
+    </div>
+    <div class="col-lg-6 col-md-6">
+      <h1>Steps to How to Download</h1>
+      <p>1) Copy the link of the video. </p>
+      
+      <p>2) Paste it in our URL box and click on download.</p>
+      
+      <p>3) Select the video/audio format you want to download, then click "Download" button.</p>
+      <p>4) Enjoy the streaming.</p>
+      <h1>Special Features</h1>
+      <p><i class="fa fa-star" style="width: 0.725em;color: #999;"></i>&nbsp;High speed Vide downloader.</p>
+      <p><i class="fa fa-star" style="width: 0.725em;color: #999;"></i>&nbsp;Unlimited and Free downloads.</p>
+      <p><i class="fa fa-star" style="width: 0.725em;color: #999;"></i>&nbsp;No registration required.</p>
+      <p><i class="fa fa-star" style="width: 0.725em;color: #999;"></i>&nbsp;Supports all video platforms download. </p>
+      <h3>TELL YOUR FRIENDS</h3>
+      <p>Like our service? Share it with your friends.</p>
+    </div>
+  </div>
+</div>
+
+<!--Content starts-->
+<section class="container-fluid">
+  <div class="container">
+  <p style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+</section>
+<!--Content ends-->
+
+<!--About us starts-->
+<div class="container" id="about">
+  <div class="row abt-us">
+    <div class="col-lg-6 col-md-6">
+      <img src="/images/About-us.png" class="img-fluid"/>
+    </div>
+    <div class="col-lg-6 col-md-6" style="padding-top: 6rem;text-align: justify;">
+      <h1>About Us</h1>
+      <p>
+        Our “Website name” Provides the fastest and the efficient way of downloading videos form the internet. Downloading videos isn’t that difficult as we all think. It’s just a two step process, You can just copy the link of the video and paste it in our website and download the video to save it in your remote desktop. 
+      </p>
+      <p>
+        It’s not an extension and it’s a free website to download videos not only from YouTube, But also from various other platforms like Facebook, Vimeo, Twitter, Dailymotion and various other popular websites.
+      </p>
+    </div>
+  </div>
+</div>
+<!--About us ends-->
+
+
+
+
+
+<div class="container-fluid" style="padding-bottom: 1rem;background-color: #e8e7e7;" id="news">
+    <div class="row pad-top">
+        <div class="col-lg-10 offset-lg-1 text-center">
+          <h3>Subscribe to get Newsletters Your Personal Advisor </h3>
+        </div>
+      </div>
+  <div class="row pad-top" id="contact">
+    <div class="col-lg-6 offset-lg-3 text-center">
+      <div class="input-group mb-3 input-group-lg">
+        <input type="text" class="form-control form-control-2" placeholder="Enter your Mail" aria-label="Recipient's username" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+          <span class="btn btn-primary subscribe" id="">Subscribe</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--How to download ends-->
+
+<div class="right-fixed" id="move-top">
+  {{!-- <a href="#home"><i class="fa fa-chevron-up"></i></a> --}}
+  <a href="#home"><img src="/images/top-1.png" style="height: 50px;width: 50px;"/></a>
+</div>
+
+<div id="social">
+<div class="a2a_kit a2a_kit_size_32 a2a_floating_style a2a_vertical_style" style="left:0px; top:16.5rem;">
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    {{!-- <a class="a2a_dd" href="https://www.addtoany.com/share"></a> --}}
+</div>
+</div>
+<script>
+var a2a_config = a2a_config || {};
+a2a_config.num_services = 4;
+</script>
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("move-top").style.display = "block";
+    } else {
+        document.getElementById("move-top").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
