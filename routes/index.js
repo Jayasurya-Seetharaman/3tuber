@@ -3,7 +3,7 @@ var router = express.Router();
 var ytdl = require('youtube-dl');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/3tuber', function(req, res, next) {
   res.render('index', { title: 'Video Downloader' });
 });
 
