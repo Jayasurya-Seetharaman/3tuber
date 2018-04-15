@@ -1,25 +1,25 @@
 /*Banner image*/
 .jumbotron {
-  background: url('../images/banner-image.png');
+  background: url('/3tuber/images/banner-image.png');
 }
 @media (min-width: 1440px) and (max-width: 1590px) {
   .jumbotron {
-    background: url('../images/3tubr-Video-Downloader-2.png');
+    background: url('/3tuber/images/3tubr-Video-Downloader-2.png');
   } 
 }
 @media (min-width: 1590px) and (max-width: 1750px) {
   .jumbotron {
-    background: url('../images/3tubr-Video-Downloader-3.png');
+    background: url('/3tuber/images/3tubr-Video-Downloader-3.png');
   } 
 }
 @media (min-width: 1751px) and (max-width:1919px) {
   .jumbotron {
-    background: url('../images/3tubr-Video-Downloader-4.png');
+    background: url('/3tuber/images/3tubr-Video-Downloader-4.png');
   } 
 }
 @media (min-width: 1920px) {
   .jumbotron {
-    background: url('../images/3tubr-Video-Downloader.png');
+    background: url('/3tuber/images/3tubr-Video-Downloader.png');
   } 
 }
 
